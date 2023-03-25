@@ -1,0 +1,20 @@
+{
+    "name": "demo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "author": "",
+    "license": "",
+    "scripts": {
+        "build": "zenstack generate"
+    },
+    "devDependencies": {
+        "zenstack": "^1.0.0-alpha.81"
+    },
+    "dependencies": {
+        "@prisma/client": "^4.11.0",
+        "@zenstackhq/runtime": "^1.0.0-alpha.81",
+        "@zenstackhq/trpc": "^1.0.0-alpha.81",
+        "prisma": "^4.11.0"
+    }
+}
