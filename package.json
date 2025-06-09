@@ -16,5 +16,29 @@
         "@zenstackhq/runtime": "^1.0.0-alpha.81",
         "@zenstackhq/trpc": "^1.0.0-alpha.81",
         "prisma": "^4.11.0"
+    },
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "abc",
+                "aliases": [
+                    "abc"
+                ],
+                "extensions": [
+                    ".abc"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "abc",
+                "scopeName": "source.abc",
+                "path": "./syntaxes/your-grammar.tmLanguage.json"
+            }
+        ]
     }
 }
