@@ -1,0 +1,47 @@
+{
+  "name": "abc",
+  "scopeName": "source.abc",
+  "fileTypes": [ ".abc" ],
+  "patterns": [
+    { "include": "#comments" },
+    {
+      "name": "keyword.control.abc",
+      "match": "\\b(Any|BigInt|Boolean|Bytes|ContextType|DateTime|Decimal|FieldReference|Float|Int|Json|Null|Object|String|TransitiveFieldReference|Unsupported|abstract|attribute|datasource|enum|extends|false|function|generator|import|in|model|null|plugin|this|true|type|view)\\b"
+    },
+    {
+      "name": "string.quoted.double.abc",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [ { "include": "#string-character-escape" } ]
+    },
+    {
+      "name": "string.quoted.single.abc",
+      "begin": "'",
+      "end": "'",
+      "patterns": [ { "include": "#string-character-escape" } ]
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.abc",
+          "begin": "/\\*",
+          "beginCaptures": { "0": { "name": "punctuation.definition.comment.abc" } },
+          "end": "\\*/",
+          "endCaptures": { "0": { "name": "punctuation.definition.comment.abc" } }
+        },
+        {
+          "begin": "//",
+          "beginCaptures": { "1": { "name": "punctuation.whitespace.comment.leading.abc" } },
+          "end": "(?=$)",
+          "name": "comment.line.abc"
+        }
+      ]
+    },
+    "string-character-escape": {
+      "name": "constant.character.escape.abc",
+      "match": "\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|u\\{[0-9A-Fa-f]+\\}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.|$)"
+    }
+  }
+}
