@@ -37,7 +37,7 @@
             {
                 "language": "abc",
                 "scopeName": "source.abc",
-                "path": "./syntaxes/your-grammar.tmLanguage.json"
+                "path": "./syntaxes/abc.tmLanguage.json"
             }
         ]
     }
